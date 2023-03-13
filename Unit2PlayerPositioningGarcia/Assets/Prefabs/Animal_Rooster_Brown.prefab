@@ -1341,6 +1341,8 @@ GameObject:
   - component: {fileID: -4676431267204798002}
   - component: {fileID: 402372428913124329}
   - component: {fileID: 5483530000473310035}
+  - component: {fileID: 2864264039412632372}
+  - component: {fileID: -6622555490795807109}
   m_Layer: 0
   m_Name: Animal_Rooster_Brown
   m_TagString: Untagged
@@ -1427,5 +1429,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58c846577c2a82a45b2832a42237c9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2864264039412632372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011397418360471209}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.177795, y: 17.924448, z: 23.864393}
+  m_Center: {x: -0.045928955, y: 7.1689887, z: -1.0640955}
+--- !u!114 &-6622555490795807109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011397418360471209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d7df0bfbefa2b4abaedaeeb29b4bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

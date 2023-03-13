@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 10.0f;
     public float xRange = 10.0f;
+    public float zRange = 10.0f;
 
     public GameObject projectilePrefab;
 
@@ -29,6 +31,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
+        //forward movement
+        if (transform.position.x < -zRange)
+        {
+            transform.position = new Vector3(-zRange, transform.position.x, transform.position.y);
+        }
+
+        if (transform.position.x > zRange)
+        {
+            transform.position = new Vector3(zRange, transform.position.x, transform.position.y);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Launch projectile from the player
@@ -37,5 +50,8 @@ public class PlayerController : MonoBehaviour
 
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
 }

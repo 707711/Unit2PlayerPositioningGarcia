@@ -6,6 +6,10 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
 
+    int sideMinZ = 2;
+    int sideMaxZ = 15;
+    int spawnPosX = 20;
+
     private float spawnRangeX = 20;
     private float spawnPosZ = 20;
 
@@ -26,12 +30,12 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomAnimal()
     {
-        void SpawnRandomAnimal()
-        {
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-        }
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int animalIndex = Random.Range(0, animalPrefabs.Length);
+
+        Vector3 spawnPos = new Vector3(Random.Range(sideMinZ, sideMaxZ), 0, spawnPosX);
+
+        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
     }
 }
