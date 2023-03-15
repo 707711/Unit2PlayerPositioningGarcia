@@ -171,6 +171,9 @@ MonoBehaviour:
   - {fileID: 2169509492891116305, guid: e4e1619d6a7ba8b48a9133061b8b2712, type: 3}
   - {fileID: 237004072440360444, guid: 11b3438629424c9419f86831bb66b8d9, type: 3}
   - {fileID: 6011397418360471209, guid: 0e91b26909e2f674eaff882c16a94f0a, type: 3}
+  sideSpawnMinZ: 0
+  sideSpawnMaxZ: 15
+  sideSpawnX: -20
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
