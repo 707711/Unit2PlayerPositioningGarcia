@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
     public float xRange = 10.0f;
     public float zRange = 10.0f;
 
+    static int score = 0;
+    static int lives = 3;
+
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -53,5 +56,26 @@ public class PlayerController : MonoBehaviour
 
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+    }
+    
+    static public void hit()
+    {
+        lives--;
+
+        if (lives > 0)
+        {
+            Debug.Log($"Lives = {lives}");
+        }
+
+        else
+        {
+            Debug.Log("Game Over!");
+        }
+    }
+
+    static public void addScore()
+    {
+        score++;
+        Debug.Log($"Score = {score}");
     }
 }
